@@ -2,6 +2,6 @@
 	"name": "USGCColorOverride",
 	"description": "An addon mod for UltraSkins GC, allowing you to add custom color palettes for individual weapon skins.",
 	"version_number": "1.0.0",
-	"dependencies": [ "ULTRASKINS_GC-6.0.2", "BepInEx-BepInExPack-5.4.2100" ],
+	"dependencies": [ "bobthecorn-ULTRASKINS_GC-6.0.2", "BepInEx-BepInExPack-5.4.2100" ],
 	"website_url": "https://github.com/Tetriscat66/USGCColorOverride/"
 }
