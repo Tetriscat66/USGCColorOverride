@@ -39,6 +39,7 @@ public class Plugin : BaseUnityPlugin {
 		t_charge2_ID = LoadTexture2D("charge2_ID.png");
 		Harmony harmony = new Harmony(MyPluginInfo.PLUGIN_GUID);
 		harmony.PatchAll();
+		USAPI.OnTexLoadFinished += UltraSkinsPatches.PostLoadTextures;
 		Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
 	}
 

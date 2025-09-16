@@ -45,10 +45,8 @@ namespace USGCColorOverride {
 		// for _Palette sprites 
 		private static Size expectedSize = new Size(4, 5);
 
-		[HarmonyPatch(typeof(ULTRASKINHand), nameof(ULTRASKINHand.LoadTextures))]
-		[HarmonyPostfix]
-		private static void PostLoadTextures(ref string __result) {
-			if(__result != "Success")
+		internal static void PostLoadTextures(TextureLoadEventArgs TLEA) {
+			if(TLEA.Failed)
 				return;
 			// setup color overrides -- fill it with the _Palette textures
 			Plugin.ColorOverrides.Clear();
